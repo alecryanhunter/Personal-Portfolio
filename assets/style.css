@@ -1,19 +1,97 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Temporary Border - Delete Later */
+    border: 1px solid black;
 }
 
+/**
+* NAME AND NAV
+*/
+
 header {
-    background-color: forestgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 80px;
+    background: linear-gradient(darkgreen 0%,forestgreen 30%);
+    /* Attempting a gradient border, likely will not use. */
+    border-bottom-width: 40px;
+    border-style: solid;
+    border-image: linear-gradient(forestgreen 80%, whitesmoke 100%) 0;
+}
+
+header .name {
+    margin: 10px 5px 10px 5px;
+}
+
+header .name h1 {
+    font-size: 300%;
+    font-variant-caps: small-caps;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    font-size: 200%;
+}
+
+/**
+* ABOUT ME AND WORK
+*/
+
+.about {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about h2 {
+    flex-basis: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.work {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.work h2 {
+    flex-basis: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.work ul li {
+    list-style-type: none;
 }
 
 main {
     background-color: goldenrod;
 }
 
+/**
+* CONTACT ME
+*/
+
 footer {
     background-color: forestgreen;
 }
 
-/* Add @margin aspects for the site */
+/* Add @media aspects for the site */
+
+@media screen and (max-width:810px) {
+    
+}
