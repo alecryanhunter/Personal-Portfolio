@@ -54,7 +54,10 @@ nav a:hover {
 
 /**
 * ABOUT ME
+* Mostly blocked out
+* TODO: Add specific margins and designs
 */
+
 .about {
     background-color: goldenrod;
     display: flex;
@@ -62,20 +65,23 @@ nav a:hover {
     height: 100vh;
 }
 
-.about h2 {
+.about div {
+    background-color: brown;
     flex-basis: 25vw;
+}
+
+.about h2 {
     text-align: center;
     align-self: flex-start;
     position: sticky;
-    top: 100px;
+    top: 20px;
     background-color: red;
 }
 
-.about p {
+.about section {
     text-indent: 20px;
     line-height: 20px;
     background-color: blue;
-    flex: 2;
 }
 
 .about p+p {
@@ -85,7 +91,6 @@ nav a:hover {
 .about figure {
     justify-self: flex-end;
     background-color: pink;
-    flex: 1;
     text-align:center;
 }
 
@@ -94,23 +99,22 @@ nav a:hover {
 */
 
 .work {
+    background-color: cornflowerblue;
     display: flex;
-    justify-content: space;
-    flex-wrap: wrap;
     padding-top: 20px;
     height: 100vh;
-    flex: 1;
-    align-items: stretch;
-    flex-direction: row;
+}
+
+.work div {
+    background-color: sienna;
+    flex-basis: 25vw;
 }
 
 .work h2 {
-    flex-basis: 30vw;
-    flex-grow: 0;
-    flex-shrink: 0;
     text-align: center;
     position: sticky;
-    top: 1000px
+    top: 10px;
+    background-color: red;
 }
 
 div.workboxes {
