@@ -9,7 +9,7 @@
         
         <!-- Name and Navigation Here -->
         <header>
-            <section class="name">
+            <section id="top" class="name">
                 <h1>Alec Hunter</h1>
                 <p><i>alecryanhunter</i></p>
             </section>
@@ -21,30 +21,48 @@
             </nav>
         </header>
 
-        <!-- About Me, Image, and Links to Webpages -->
         <main>
-
+            <!-- About Section -->
             <section id="about" class="about">
                 <h2 class="side">About Me</h2>
                 <section>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At tenetur sed cumque expedita ipsa ad vitae assumenda cupiditate ex. Quas cupiditate omnis, quisquam mollitia et perferendis quod minus esse odit!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At tenetur sed cumque expedita ipsa ad vitae assumenda cupiditate ex. Quas cupiditate omnis, quisquam mollitia et perferendis quod minus esse odit!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At tenetur sed cumque expedita ipsa ad vitae assumenda cupiditate ex. Quas cupiditate omnis, quisquam mollitia et perferendis quod minus esse odit!</p>
                 </section>
                 <figure>
-                    <img src="https://placekitten.com/120" alt="A placeholder kitty">
+                    <img src="https://placekitten.com/300" alt="A placeholder kitty">
                     <figcaption>A placeholder kitty!</figcaption>
                 </figure>
             </section>
 
+            <!-- Work Section -->
             <section id="work" class="work">
-                <h2 class="side">My Work</h2>
-                <section>
-                    <li id="favorite">My Favorite Page</li>
-                    <li>Other Page 1</li>
-                    <li>Other Page 2</li>
-                    <li>Other Page 3</li>
-                    <li>Other Page 4</li>
-                </ul>
+                <div>
+                    <h2 class="side">My Work</h2>
+                </div>
+                <div class="workboxes">
+                    <section class="card">
+                        <img src="https://placekitten.com/400" alt="">
+                        <a href="">My Favorite Page</a>
+                    </section>
+                    <section class="card">
+                        <img src="https://placekitten.com/200" alt="">
+                        <a href="">Other Page 1</a>
+                    </section>
+                    <section class="card">
+                        <img src="https://placekitten.com/200" alt="">
+                        <a href="">Other Page 2</a>
+                    </section>
+                    <section class="card">
+                        <img src="https://placekitten.com/200" alt="">
+                        <a href="">Other Page 3</a>
+                    </section>
+                    <section class="card">
+                        <img src="https://placekitten.com/200" alt="">
+                        <a href="">Other Page 4</a>
+                    </section>
+                </div>
             </section>
 
         </main>
@@ -57,5 +75,9 @@
             <p>Github</p>
         </footer>
 
+        <!-- Trying to make a "return to top of page" that appears if you scroll far enough down. -->
+        <div class="return">
+            <a href="#top">Top of Page</a>
+        </div>
     </body>
 </html>

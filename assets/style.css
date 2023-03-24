@@ -10,12 +10,18 @@
 * NAME AND NAV
 */
 
+/* TODO: Change header to fixed. */
+
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     min-height: 80px;
+    border-bottom: 5px solid whitesmoke;
     background: linear-gradient(darkgreen 0%,forestgreen 30%);
+    /* position: sticky; */
+    top: -10px;
+    /* z-index: 1; */
 }
 
 header .name {
@@ -38,38 +44,49 @@ nav a {
     text-decoration: none;
     color: black;
     padding: 15px;
-    font-size: 200%;
+    font-size: 150%;
+    margin-top: 30px;
+}
+/* TODO: Change color from red */
+nav a:hover {
+    color: red;
 }
 
 /**
 * ABOUT ME
 */
-
 .about {
     background-color: goldenrod;
     display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    height: 60vh
+    padding-top: 20px;
+    height: 100vh;
 }
 
 .about h2 {
-    flex-basis: 200px;
-    flex-grow: 0;
-    flex-shrink: 0;
+    flex-basis: 25vw;
     text-align: center;
     align-self: flex-start;
     position: sticky;
-    top: 10px
+    top: 100px;
+    background-color: red;
 }
 
 .about p {
     text-indent: 20px;
     line-height: 20px;
+    background-color: blue;
+    flex: 2;
+}
+
+.about p+p {
+    padding-top: 10px;
 }
 
 .about figure {
     justify-self: flex-end;
+    background-color: pink;
+    flex: 1;
+    text-align:center;
 }
 
 /**
@@ -78,31 +95,32 @@ nav a {
 
 .work {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space;
     flex-wrap: wrap;
+    padding-top: 20px;
+    height: 100vh;
+    flex: 1;
+    align-items: stretch;
+    flex-direction: row;
 }
 
 .work h2 {
-    flex-basis: 200px;
+    flex-basis: 30vw;
     flex-grow: 0;
     flex-shrink: 0;
     text-align: center;
+    position: sticky;
+    top: 1000px
 }
 
-.work ul {
+div.workboxes {
+    background: linear-gradient(red, rebeccapurple);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.work ul li {
-    list-style-type: none;
-    flex-grow: 1;
-    border: 2px solid black;
-}
-
-.work ul li#favorite {
-    flex-grow: 2;
+.work a.favorite {
+    /* flex-grow: 2; */
 }
 
 /**
@@ -113,8 +131,16 @@ footer {
     background-color: forestgreen;
 }
 
+/* Attempts at making a "return to top of page" button */
+
+.return {
+    position: none;
+    left: 100px;
+    bottom: 100px;
+    visibility: none;
+}
 /* Add @media aspects for the site */
 
 @media screen and (max-width:810px) {
-    
+    /* Add wrap to about section */
 }
