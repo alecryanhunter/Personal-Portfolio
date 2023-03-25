@@ -14,7 +14,7 @@
 }
 
 /**
-* TITLE
+* TITLE - not finished
 */
 
 header {
@@ -35,7 +35,7 @@ header .name h1 {
 }
 
 /**
-* NAV
+* NAV - not finished 
 */
 
 nav {
@@ -56,7 +56,7 @@ nav a:hover {
 }
 
 /**
-* HERO IMAGE
+* HERO IMAGE -not finished
 */
 
 .hero {
@@ -66,11 +66,15 @@ nav a:hover {
     height: 200px;
 }
 
-
 /**
 * SIDEBARS
-* For About Me, Work, and Contact
-* FINISHED!!!
+* All sidebars are functionally the same, and the rulesets are written such that
+* They will adjust to the size of the content in the rest of the flex container.
+* 
+* The construction of the sidebars is a div with a single h2 inside. It is crucial
+* that the .work and .about sections have display:flex; on them. This lets the div
+* be as long as the longest content in their section, so that the much smaller h2
+* section can scroll along with the screen.
 */
 
 div.side {
@@ -89,16 +93,18 @@ div.side h2 {
     top: 20px;
     
     /* Spacing Declarations */
-    padding: 10px 10px 50px 0px;
     border-radius: 10px;
     border-right: 5px solid black;
     margin-right: 10px;
     margin-top: 5%;
+    padding: 10px 10px 50px 0px;
 }
 
 /**
 * ABOUT ME
-* FINISHED!!!
+* This contains mainly only visual rules like body color and spacing.
+* Can add font rules into this section if want finer control over the
+* text body.
 */
 
 .about {
@@ -116,7 +122,11 @@ div.side h2 {
     padding-top: 10px;
 }
 
-/* About Me - Image and Caption FINISHED!!! */
+/** 
+* ABOUT ME - FIGURE AND CAPTION
+* The only complex thing about this is the placemenet of the caption's border
+* box, which I want to be flush with the interior wall of the image's border.
+*/
 
 .about figure {
     margin: 1%;
@@ -144,14 +154,10 @@ div.side h2 {
 }
 
 /**
-* WORK EXAMPLES
+* WORK EXAMPLES - not finished
+* Add 100px of extra to Fig1
+* Add 50px of extra to Fig2
 */
-
-div.workboxes {
-    background: linear-gradient(red, rebeccapurple);
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .work {
     background-color: cornflowerblue;
@@ -159,8 +165,54 @@ div.workboxes {
     height: 100vh;
 }
 
+.workboxes {
+    background: linear-gradient(red, rebeccapurple);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card {
+    height: 250px;
+    width: 250px;
+}
+
+#favorite {
+    height: 500px;
+    width: 500px;
+}
+
+.card img {
+    border: 10px solid black;
+}
+
+.card figcaption {
+    border: 5px solid black;
+    background-color: black;
+    color: white;
+    text-align: left;
+    margin: 0 auto 0 0;
+    max-width: fit-content;
+    padding: 5px 20px 5px 10px;
+    position: relative;
+    top: -80px;
+}
+
+/* .card figcaption {
+    background-color: var(--body-color);
+    border: 5px solid black;
+    border-radius: 10px;
+
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 5px 20px;
+    position: relative;
+    top: -14px;
+} */
+
 /**
-* CONTACT ME
+* CONTACT ME - not finished
 */
 
 .contact {
@@ -169,11 +221,11 @@ div.workboxes {
 }
 
 /* Actual Footer */
-
+/* not even started */
 
 
 /**
-* Tablet Version
+* Tablet Version - not finished
 */
 
 @media screen and (max-width:992px) {
@@ -194,7 +246,7 @@ div.workboxes {
 }
 
 /**
-* Mobile Version
+* Mobile Version - not finished
 */
 
 @media screen and (max-width:768px) {
