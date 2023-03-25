@@ -1,9 +1,15 @@
+:root {
+    --primary-color: blue;
+    --secondary-color: forestgreen;
+    --accent-color: red;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 /**
@@ -16,12 +22,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 80px;
     border-bottom: 5px solid whitesmoke;
     background: linear-gradient(darkgreen 0%,forestgreen 30%);
-    /* position: sticky; */
-    top: -10px;
-    /* z-index: 1; */
 }
 
 header .name {
@@ -36,7 +38,6 @@ header .name h1 {
 
 nav {
     display: flex;
-    justify-content: flex-end;
     margin: 5px;
 }
 
@@ -123,10 +124,6 @@ div.workboxes {
     flex-wrap: wrap;
 }
 
-.work a.favorite {
-    /* flex-grow: 2; */
-}
-
 /**
 * CONTACT ME
 */
@@ -143,8 +140,45 @@ footer {
     bottom: 100px;
     visibility: none;
 }
-/* Add @media aspects for the site */
 
-@media screen and (max-width:810px) {
-    /* Add wrap to about section */
+/**
+* Tablet Version
+*/
+
+@media screen and (max-width:992px) {
+    /* Temporary Coloring for Testing */
+    header {
+        background: deeppink;
+    }
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    nav,
+    nav a {
+        flex-direction: row;
+        margin: 0;
+        justify-content: center;
+    }
+}
+
+/**
+* Mobile Version
+*/
+
+@media screen and (max-width:768px) {
+    /* Temporary Coloring for Testing */
+    header {
+        background: aqua;
+    }
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    nav,
+    nav a {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
 }
