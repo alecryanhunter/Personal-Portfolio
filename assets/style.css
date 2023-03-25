@@ -1,6 +1,6 @@
 :root {
     --primary-color: blue;
-    --secondary-color: forestgreen;
+    --side-color: sienna;
     --accent-color: red;
 }
 
@@ -9,14 +9,12 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 /**
-* NAME AND NAV
+* TITLE
 */
-
-/* TODO: Change header to fixed. */
 
 header {
     display: flex;
@@ -35,6 +33,10 @@ header .name h1 {
     font-weight: normal;
 }
 
+/**
+* NAV
+*/
+
 nav {
     display: flex;
     margin: 5px;
@@ -47,6 +49,14 @@ nav a {
     font-size: 150%;
     margin-top: 30px;
 }
+/* TODO: Change color from red */
+nav a:hover {
+    color: red;
+}
+
+/**
+* HERO IMAGE
+*/
 
 .hero {
     background-image: url(https://placekitten.com/2000/200);
@@ -55,34 +65,42 @@ nav a {
     height: 200px;
 }
 
-/* TODO: Change color from red */
-nav a:hover {
-    color: red;
+
+/**
+* SIDEBARS
+* For About Me, Work, and Contact
+* 
+*/
+
+div.side {
+    background-color: var(--side-color);
+    width: 300px;
+    flex-shrink: 0;
+}
+
+div.side h2 {
+    text-align: right;
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+    background-color: var(--side-color);
+    margin-top: 5%;
+    
+    border-right: 5px solid black;
+    padding: 10px 10px 50px 0px;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
 /**
 * ABOUT ME
 * Mostly blocked out
-* TODO: Add specific margins and designs
 */
 
 .about {
     background-color: goldenrod;
     display: flex;
     height: 100vh;
-}
-
-.about div {
-    background-color: brown;
-    flex-basis: 25vw;
-}
-
-.about h2 {
-    text-align: center;
-    align-self: flex-start;
-    position: sticky;
-    top: 20px;
-    background-color: red;
 }
 
 .about section {
@@ -105,29 +123,16 @@ nav a:hover {
 * WORK EXAMPLES
 */
 
-.work {
-    background-color: cornflowerblue;
-    display: flex;
-    padding-top: 20px;
-    height: 100vh;
-}
-
-.work div {
-    background-color: sienna;
-    flex-basis: 25vw;
-}
-
-.work h2 {
-    text-align: center;
-    position: sticky;
-    top: 10px;
-    background-color: red;
-}
-
 div.workboxes {
     background: linear-gradient(red, rebeccapurple);
     display: flex;
     flex-wrap: wrap;
+}
+
+.work {
+    background-color: cornflowerblue;
+    display: flex;
+    height: 100vh;
 }
 
 /**
@@ -136,16 +141,9 @@ div.workboxes {
 
 footer {
     background-color: forestgreen;
+    display: flex;
 }
 
-/* Attempts at making a "return to top of page" button */
-
-.return {
-    position: none;
-    left: 100px;
-    bottom: 100px;
-    visibility: none;
-}
 
 /**
 * Tablet Version
@@ -183,8 +181,9 @@ footer {
     }
     nav,
     nav a {
-        flex-direction: column;
+        flex-direction: row;
         margin: 0;
         align-items: center;
+        font-size: 100%
     }
 }
