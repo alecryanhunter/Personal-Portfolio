@@ -155,7 +155,7 @@ nav a:hover {
 }
 
 /**
-* WORK EXAMPLES - not finished
+* WORK EXAMPLES - mostly done
 * Add 100px of extra to Fig1
 * Add 50px of extra to Fig2
 */
@@ -174,7 +174,6 @@ nav a:hover {
     padding: 2% 5%;
 }
 
-/* the line-height is there cause the .cards were 4px larger the .card img */
 .card {
     background-image: url(https://placekitten.com/350);
     background-position: bottom 0 left 0;
@@ -230,13 +229,12 @@ nav a:hover {
 
 
 /**
-* Tablet Version - not finished
+* Tablet Version - mostly done - need to ensure later additions work
 */
 
 @media screen and (max-width:992px) {
-    /* Temporary Coloring for Testing */
     .side {
-        background-color: deeppink;
+        width: 180px;
     }
     header {
         flex-direction: column;
@@ -255,23 +253,44 @@ nav a:hover {
 }
 
 /**
-* Mobile Version - not finished
+* Mobile Version - mostly done, need to make sure contact works
 */
 
 @media screen and (max-width:768px) {
-    /* Temporary Coloring for Testing */
     .side {
-        background-color: aqua;
+        width: 100%;
     }
+    
+    .side h2 {
+        /* Zeroing things out */
+        padding: 0;
+        border: 0;
+        margin: 0;
+
+        /* Re-defining new styles */
+        width: 80%;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 5px solid black;
+        margin: 10px 10px 10px 10px;
+    }
+
     header {
         flex-direction: column;
         justify-content: flex-start;
     }
+
     nav,
     nav a {
         flex-direction: row;
         margin: 0;
         align-items: center;
         font-size: 100%
+    }
+
+    .about,
+    .work,
+    .contact {
+        flex-direction: column;
     }
 }
