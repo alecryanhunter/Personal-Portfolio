@@ -2,7 +2,8 @@
 :root {
     --primary-color: #4F695E;
     --body-color: #C49E85;
-    --side-color: #AF3E4D;
+    --body-darker: #695446;
+    --side-color: #984447;
     --hover-color: #B9E6FF;
 }
 
@@ -126,7 +127,7 @@ nav a:hover {
     display: flex;
 }
 
-.about section {
+.about article {
     line-height: 1.6;
     margin: 2% 3%;
     text-indent: 20px;
@@ -175,8 +176,12 @@ nav a:hover {
 * Inside the anchor is a section with an h3 and a p, which holds the text, which
 * is relatively positioned into place.
 *
-* There is the bare bones of :hover and :active for the cards, which I want to expand
-* significantly.
+* Each card has an id which allows it to have a specific background image. I keep a
+* placeholde image on all cards, just in case the individual images fail for some
+* reason.
+*
+* The cards have hover and active states that make them pop a bit more than other
+* content on the page.
 */
 
 .work {
@@ -198,7 +203,8 @@ nav a:hover {
     background-size: 50%;
 
     border: 10px solid black;
-    margin: 10px 0;
+    margin: 20px 0;
+    box-shadow: 10px 10px 10px var(--body-darker);
 
     width: 40%;
     min-height: 200px;
@@ -213,11 +219,36 @@ nav a:hover {
 }
 
 .card#favorite {
-    background-image: url(https://placekitten.com/700);
+    background-image: url(./images/Baker_Snow_Mt.JPG);
     background-position: center;
+    background-size: cover;
     height: 45vh;
     min-height: 300px;
     width: 90%;
+}
+
+.card#card-one {
+    background-image: url(./images/Cascade_Pass_Lake.JPG);
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.card#card-two {
+    background-image: url(./images/Mttop_Torii.JPG);
+    background-position: center bottom 20%;
+    background-size: cover;
+}
+
+.card#card-three {
+    background-image: url(./images/Roof_Detail.JPG);
+    background-position: center;
+    background-size: cover;
+}
+
+.card#card-four {
+    background-image: url(./images/Baker_Valley.JPG);
+    background-position: center;
+    background-size: cover;
 }
 
 .card section {
@@ -244,9 +275,10 @@ nav a:hover {
 }
 
 .card:hover {
-    transition: all 0.5s;
-    transform: scale(1.05,1.05);
     background-size: 60%;
+    /* animation: wiggle 1s ease infinite; */
+    transform: scale(1.05,1.05) rotate(1deg);
+    transition: all 0.5s;
 }
 
 /**
