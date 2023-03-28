@@ -1,9 +1,9 @@
 /* FIND BETTER COLOR PALETTE */
 :root {
-    --primary-color: blue;
-    --body-color: goldenrod;
-    --side-color: sienna;
-    --accent-color: red;
+    --primary-color: #4F695E;
+    --body-color: #C49E85;
+    --side-color: #AF3E4D;
+    --hover-color: #B9E6FF;
 }
 
 * {
@@ -22,7 +22,7 @@
 */
 
 header {
-    background: linear-gradient(darkgreen 0%,forestgreen 30%);
+    background: var(--primary-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -64,7 +64,7 @@ nav a:focus {
 }
 
 nav a:hover {
-    color: red;
+    color: var(--hover-color);
 }
 
 /**
@@ -73,8 +73,9 @@ nav a:hover {
 */
 
 .hero {
-    background-image: url(https://placekitten.com/2000/200);
-    background-position: top right 50%;
+    background-image: url(./images/Index_Landscape.JPG);
+    background-position: center;
+    background-size: cover;
     height: 200px;
     width: 100%;
 }
@@ -179,7 +180,7 @@ nav a:hover {
 */
 
 .work {
-    background: linear-gradient(red, rebeccapurple);
+    background: var(--body-color);
     display: flex;
 }
 
@@ -239,7 +240,7 @@ nav a:hover {
 
 .card:focus {
     outline: 0;
-    border-color: red;
+    border-color: var(--hover-color);
 }
 
 .card:hover {
@@ -256,15 +257,16 @@ nav a:hover {
 */
 
 .contact {
-    background-color: blue;
+    background-color: var(--body-color);
     display: flex;
 }
 
 .contact section {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
     align-items: center;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .contact a {
@@ -274,7 +276,7 @@ nav a:hover {
 }
 
 .contact a:hover {
-    color:red;
+    color:var(--hover-color);
 }
 
 /**
@@ -285,7 +287,7 @@ nav a:hover {
 
 footer {
     height: 100px;
-    background: linear-gradient(0deg,darkgreen 0%,forestgreen 30%);
+    background: var(--primary-color);
     text-align: center;
 }
 

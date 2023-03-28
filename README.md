@@ -12,6 +12,12 @@ It has multiple :hover and :active features, as well as transitions.
 
 The website can be found [here!](https://alecryanhunter.github.io/bootcamp-challenge-two)
 
+## Credits
+
+All photos taken by me.
+
+Would not have been possible without the fantastic MDN Web Docs, which were an invaluable asset throughout this process.
+
 ## Screenshot
 
 ![No Screenshot Yet]()
