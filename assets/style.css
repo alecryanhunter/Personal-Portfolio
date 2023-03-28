@@ -235,7 +235,7 @@ nav a:hover {
 
 .card#card-two {
     background-image: url(./images/Mttop_Torii.JPG);
-    background-position: center bottom 20%;
+    background-position: center;
     background-size: cover;
 }
 
@@ -350,6 +350,11 @@ footer p {
 
     .card {
         width: 90%;
+        height: 10vh;
+    }
+    
+    .card#favorite {
+        height: 15vh;
     }
 }
 
