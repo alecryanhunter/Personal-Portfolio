@@ -219,7 +219,7 @@ nav a:hover {
 }
 
 .card#favorite {
-    background-image: url(./images/Baker_Snow_Mt.JPG);
+    background-image: url(./images/starry-bg.png);
     background-position: center;
     background-size: cover;
     height: 45vh;
